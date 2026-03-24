@@ -16,22 +16,30 @@
 }
 
 /* تنسيق الصورة الفنية جوه الهيدر */
-.future-banner {
-    width: 100%;       /* تاخد العرض المتاح */
-    max-width: 1000px;  /* بس متزدش عن 900 بكسل عشان متكبرش بزيادة */
-    height: auto;      /* الحفاظ على النسبة الأصلية */
-    max-height: 350px; /* تحديد أقصى طول ليها عشان متغطيش الشاشة */
-    object-fit: contain; /* تضمن إن الصورة تظهر كاملة جوه البرواز ده */
-    display: block;
-    margin: 20px auto; /* توسيط ومسافة من فوق وتحت */
-    border-radius: 15px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+/* تنسيق الهيدر باللون الكحلي الغامق عشان يتماشى مع الصورة */
+.hero { 
+    background-color: #0b1a31; /* لون أزرق غامق جداً زي خلفية صورتك */
+    padding: 30px 0; 
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-/* تنسيق لعرض الصورة كاملة على الموبايل */
+
+.future-banner {
+    max-width: 100%;   /* تاخد العرض المتاح في الشاشات الصغيرة */
+    width: 900px;      /* عرض ثابت ومناسب للكمبيوتر */
+    height: auto;      /* الحفاظ على الأبعاد */
+    display: block;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5); /* ظل ناعم عشان يدمجها مع الخلفية */
+}
+
+/* تعديل بسيط للموبايل */
 @media (max-width: 768px) {
     .future-banner {
-        max-width: 100%; /* العرض كله على الموبايل */
-        border-radius: 0; /* مسح الحواف على الموبايل */
+        width: 100%;
+        border-radius: 0;
     }
 }
 
